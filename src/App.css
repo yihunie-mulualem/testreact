@@ -1,0 +1,85 @@
+/* Container for the columns */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #DAD07B;
+    /* Maximum width on large screens */
+}
+body {
+    background-color: #DAD07B; /* Light yellow color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+/* Column styling */
+.column {
+    flex: 1 1 45%; /* Two columns on larger screens */
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Image styling */
+.image {
+    width: 100%; /* Responsive image */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Text Box styling */
+.text-box {
+    background-color:#83CF22;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Text styling */
+.text {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Button container styling */
+.button-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button styling */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color:#83CF22;
+}
+
+/* Responsive Styles */
+
+/* For screens 1200px and smaller */
+@media (max-width: 1200px) {
+    .column {
+        flex-basis: 45%; /* Slightly more space between columns for large tablets */
+    }
+}
+
+/* For screens 768px and smaller (tablets) */
+@media (max-width: 768px) {
+    .column {
+        flex-basis: 100%; /* Stack columns on top of each other */
+    }
+}
+
+/* For screens 480px and smaller (mobile) */
+@media (max-width: 480px) {
+    .column {
+        flex-basis: 100%; /* Stack columns on mobile */
+    }
+
+    .text {
+        font-size: 16px; /* Smaller text for mobile */
+    }
+}
